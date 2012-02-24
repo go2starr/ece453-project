@@ -1,0 +1,13 @@
+Replace Part * > 38kHz Decoder / Receiver in C:\vmware-shared\tmp\top-level.SchDoc with > 38kHz Decoder / Receiver from parts.SchLib
+Replace Part * IR Xmitter in C:\vmware-shared\tmp\top-level.SchDoc with IR Xmitter from parts.SchLib
+Replace Part * 38kHz Encoder in C:\vmware-shared\tmp\top-level.SchDoc with 38kHz Encoder from parts.SchLib
+Replace Part * > 38kHz Encoder / Transmitter in C:\vmware-shared\tmp\top-level.SchDoc with > 38kHz Encoder / Transmitter from parts.SchLib
+Replace Part * 3-axis Ac'meter in C:\vmware-shared\tmp\top-level.SchDoc with 3-axis Ac'meter from parts.SchLib
+Replace Part * uC in C:\vmware-shared\tmp\top-level.SchDoc with uC from parts.SchLib
+Replace Part * IR Receiver in C:\vmware-shared\tmp\top-level.SchDoc with IR Receiver from parts.SchLib
+Replace Part * FPGA in C:\vmware-shared\tmp\top-level.SchDoc with FPGA from parts.SchLib
+Replace Part * ACC_PORT in C:\vmware-shared\tmp\top-level.SchDoc with ACC_PORT from parts.SchLib
+Replace Part * ARM in C:\vmware-shared\tmp\top-level.SchDoc with ARM from parts.SchLib
+Replace Part * USB Controller in C:\vmware-shared\tmp\top-level.SchDoc with USB Controller from parts.SchLib
+Replace Part * USB Port in C:\vmware-shared\tmp\top-level.SchDoc with USB Port from parts.SchLib
+Replace Part * PS3_Controller in C:\vmware-shared\tmp\top-level.SchDoc with PS3_Controller from parts.SchLib
