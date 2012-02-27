@@ -1,6 +1,6 @@
 ------------------------------------------------------------
 -- VHDL topMINUSlevel
--- 2012 2 23 21 27 47
+-- 2012 2 24 11 49 10
 -- Created By "DXP VHDL Generator"
 -- "Copyright (c) 2002-2004 Altium Limited"
 ------------------------------------------------------------
@@ -98,6 +98,11 @@ architecture structure of topMINUSlevel is
    End Component;
 
    Component uC                                              -- ObjectKind=Part|PrimaryId=*|SecondaryId=1
+      port
+      (
+        X_9  : inout STD_LOGIC;                              -- ObjectKind=Pin|PrimaryId=*-9
+        X_10 : inout STD_LOGIC                               -- ObjectKind=Pin|PrimaryId=*-10
+      );
    End Component;
 
    Component USB_Controller                                  -- ObjectKind=Part|PrimaryId=*|SecondaryId=1
@@ -125,6 +130,7 @@ architecture structure of topMINUSlevel is
     Signal NamedIOSignal_USBMINUSinternal : STD_LOGIC;
     Signal PinSignal_ADDRESS : STD_LOGIC; -- ObjectKind=Net|PrimaryId=Net*_ADDRESS
     Signal PinSignal_RX_DAT  : STD_LOGIC; -- ObjectKind=Net|PrimaryId=Net*_RX
+    Signal PinSignal_TX      : STD_LOGIC; -- ObjectKind=Net|PrimaryId=Net*_TX
 
 begin
     X : X_38kHz_Decoder_Receiver                             -- ObjectKind=Part|PrimaryId=*|SecondaryId=1
@@ -153,13 +159,15 @@ begin
       (
         ADDRESS => PinSignal_ADDRESS,                        -- ObjectKind=Pin|PrimaryId=*-ADDRESS
         DATA    => NamedIOSignal_DATA,                       -- ObjectKind=Pin|PrimaryId=*-DATA
-        RX      => PinSignal_RX_DAT                          -- ObjectKind=Pin|PrimaryId=*-RX
+        RX      => PinSignal_RX_DAT,                         -- ObjectKind=Pin|PrimaryId=*-RX
+        TX      => PinSignal_TX                              -- ObjectKind=Pin|PrimaryId=*-TX
       );
 
     X : ACC_PORT                                             -- ObjectKind=Part|PrimaryId=*|SecondaryId=1
       Port Map
       (
-        RX_DAT => PinSignal_RX_DAT                           -- ObjectKind=Pin|PrimaryId=*-RX_DAT
+        RX_DAT => PinSignal_RX_DAT,                          -- ObjectKind=Pin|PrimaryId=*-RX_DAT
+        TX_DAT => PinSignal_TX                               -- ObjectKind=Pin|PrimaryId=*-TX_DAT
       );
 
     X : ARM                                                  -- ObjectKind=Part|PrimaryId=*|SecondaryId=1
