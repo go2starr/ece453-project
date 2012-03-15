@@ -1,0 +1,5 @@
+Replace Part * ACC_PORT in C:\vmware-shared\tmp\top-level.SchDoc with ACC_PORT from parts.SchLib
+Replace Part * ARM in C:\vmware-shared\tmp\top-level.SchDoc with ARM from parts.SchLib
+Replace Part * USB Controller in C:\vmware-shared\tmp\top-level.SchDoc with USB Controller from parts.SchLib
+Replace Part * USB Port in C:\vmware-shared\tmp\top-level.SchDoc with USB Port from parts.SchLib
+Replace Part * PS3_Controller in C:\vmware-shared\tmp\top-level.SchDoc with PS3_Controller from parts.SchLib
