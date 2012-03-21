@@ -1,0 +1,30 @@
+set KERNEL_IMAGE zImage
+set KERNEL_ARGS "root=/dev/mtdblock1 rootfstype=jffs2"
+
+set MEMBASE $APPRAMBASE
+set -a MEMBASE 0xf0000000
+set MEMSIZE 0x08000000
+
+set ATAGS_ADDR $APPRAMBASE
+set KERNEL_RAM_ADDR $APPRAMBASE
+set -x -i KERNEL_RAM_ADDR 4096
+
+if $ARGC gt 1 gosub SET_IMAGE
+if $KERNEL_IMAGE seq "zImage-debian" gosub SET_DEBIAN_ARGS
+
+ldatags -c -a $ATAGS_ADDR
+ldatags -m -i -a $ATAGS_ADDR core_pgsize=4096 core_flags=0 core_rootdev=0 mem32_size=$MEMSIZE mem32_start=$MEMBASE cmdline=""
+ldatags -a $ATAGS_ADDR cmdline_append="mem=64M console=ttymxc0 $KERNEL_ARGS"
+
+tfs cp $KERNEL_IMAGE $KERNEL_RAM_ADDR
+call $KERNEL_RAM_ADDR
+
+exit
+
+# SET_IMAGE
+set KERNEL_IMAGE $ARG1
+return
+
+# SET_DEBIAN_ARGS
+set KERNEL_ARGS "root=/dev/sda1 rootfstype=ext4 rootdelay=8 quiet"
+return
