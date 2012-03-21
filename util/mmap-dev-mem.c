@@ -41,6 +41,9 @@ int main()
 	pbase = (unsigned int *)mmap(0, MAP_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd, 0xD3000000 & ~MAP_MASK);
 	pmem = pbase + ((offset & MAP_MASK)>>2);
 	data = *pmem;
+        
+        // write
+        *pmem = 0x00;
 
 	// close driver
 	close(fd);

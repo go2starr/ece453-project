@@ -1,4 +1,4 @@
-PROGRAM_NAME = my_program
+PROGRAM_NAME = mem
 SRC_FILES = mmap-dev-mem.c
 
 CROSS_COMPILE ?= arm-none-linux-gnueabi-
