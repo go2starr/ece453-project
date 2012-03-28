@@ -10,14 +10,14 @@
 #include <stdint.h>
 
 struct msg{
-  unsigned short trim    : 7; //calibration
-  unsigned short nothing1: 1; //Force alignment to next boundary
-  unsigned short throttle: 7;
-  unsigned short channel : 1;
-  unsigned short pitch   : 7; //forward and backward
-  unsigned short nothing2: 1; //force alignment
-  unsigned short yaw     : 7; //turning
-  unsigned short nothing3: 1;
+  uint8_t trim    : 7; //calibration
+  uint8_t 	  : 0; //Force alignment to next boundary
+  uint8_t throttle: 7;
+  uint8_t channel : 1;
+  uint8_t pitch   : 7; //forward and backward
+  uint8_t 	  : 0; //Force alignment to next boundary
+  uint8_t yaw     : 7; //turning
+  uint8_t 	  : 0; //Force alignment to next boundary
 };
 
 

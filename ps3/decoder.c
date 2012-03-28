@@ -3,50 +3,106 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include "infraRed.h"
+#include <sys/mman.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 
 typedef uint32_t __u32;
+unsigned int *pmem;
 
-struct msg decode (js_event e){
+/*set up the pointer of the memory*/
+#define MAP_SIZE 4096UL
+#define MAP_MASK (MAP_SIZE - 1)
+#define BASE_ADDRESS 0xD3000000
+uint32_t* setP()
+{
+	int fd;
+	unsigned int offset = 0, data = 0;
+	unsigned int *pbase;
+	
+	printf("Memory Access Application\n\r");
+
+	// open the driver
+	fd = open("/dev/mem", O_RDWR|O_SYNC);
+	if(!fd) {
+		printf("Unable to open /dev/mem.  Ensure it exists (major=1, minor=1)\n");
+		return -1;
+	}	
+
+	// get the offset to read from
+	printf("Enter the hex offset to read from: ");
+	scanf("%X", &offset);
+
+	// calculate address and do read
+	pbase = (unsigned int *)mmap(0, MAP_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd, 0xD3000000 & ~MAP_MASK);
+	pmem = pbase + ((offset & MAP_MASK)>>2);
+	data = *pmem;
+        
+        return *pmem;
+	return 0;
+}
+
+
+struct msg decode (struct js_event e, struct msg * heli){
   struct msg message;
   switch(e.type){
   case 1:
     switch(e.number){
-      case 7://dpad left -> fine calibration left
-	message.trim++;
+      case 7: //dpad left -> fine calibration left
+	(*heli).trim++;
       case 5://dpad right -> fine calibration right
-	message.trim--;
+	(*heli).trim++;
       case 15://square -> rough calibration left
-	message.trim+=10;
+	(*heli).trim+=10;
       case 13://circle -> rough calibration right
-	message.trim-=10;
+	(*heli).trim-=10;
       case 0://select -> channel A
-	message.channel=0;
-      case 3://select -> channel B
-	message.channel=1;
+	(*heli).channel=0;
+      case 3://start -> channel B
+	(*heli).channel=1;
     }break;
    case 2:
     switch(e.number){
-      case 2://right thumb x -> yaw
-        message.yaw=abs(e.value);
+      case 2: //right thumb x -> yaw
+        message.yaw=-3*e.value/2048+47+message.trim/4;
       case 3://right thumb y -> pitch
-	message.pitch=abs(e.value);
+	message.pitch=e.value/512+64;
       case 12://L2 -> throttle
-	message.throttle=abs(e.value);
+	message.throttle=e.value/512+64;
+//	MESSAGE MAY BE SENT WHILE BUTTON IS IN AXIS TYPE. ADD THAT IF NEEDED
     };break;
   default:;
   }
+  message.trim=(*heli).trim;
+  message.channel=(*heli).channel;
+//bound the value
+  if (message.trim>=63) message.trim=63;
+  if (message.trim<=0) message.trim=0;
   printf("%d %d %d %d\n", message.yaw, message.pitch, message.throttle, message.trim);
   return message;
 }
 
+/* write an IR pulse for @length microseconds */
+void ir_write(int length)
+{
+  int cycles = length / 14;
+  int i=0;
+  for (i = 0; i < cycles; i++) {
+    *pmem=1;usleep(7);
+    *pmem=0;usleep(7);  
+  }
+}
+
+
 void sendbit (unsigned short bit){
-  printf("_");//send high for 260us
-  if (bit) printf("~");//delay for 350us
-  else printf("~~");//delay for 700us
+  int i=0;
+  ir_write(260);//send pulse for 260us
+  usleep(bit*350+350);//delay at low
 }
 
 void sendmsg (struct msg message){
-  printf("\n_______");//delay for 1000us to avoid confliction
+  ir_write(1000);
+  usleep(1000);//delay for 1000us to avoid confliction
   int i=0;
   for (i=0;i<32;i++){
     __u32 message=*((__u32*)(void*)(&message));//force cast message from struct to unsigned int
@@ -59,17 +115,20 @@ void sendmsg (struct msg message){
 int main () {
   int fd = open("/dev/input/js0", O_RDONLY);
   
-  //if (fd == -1)    return -1;
+//  if (fd == -1)    return -1;
   while (1) {
     struct js_event e;
+    struct msg heli;// use a current heli state to remember some semi-static value like calibration and channel
     read(fd, &e, sizeof(struct js_event));
-    e.type=1;e.number=3;e.value=50;
-    struct msg message=decode(e);
+    //e.type=1;e.number=3;e.value=50;
+    struct msg message=decode(e, &heli);
+    message.trim=0x3F;//temporary message while js is not availiable for testing.
+    message.throttle=126; message.channel=0; message.pitch=1; message.yaw=0x3F;
     sendmsg(message);
     printf("%u:: Value=%d  Type=%d  Number=%d\n",
            e.time, e.value, e.type, e.number);
-    return 0;
   }
+    return 0;
 }
 
 
