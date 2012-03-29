@@ -13,7 +13,7 @@ unsigned int *pmem;
 /*set up the pointer of the memory*/
 #define MAP_SIZE 4096UL
 #define MAP_MASK (MAP_SIZE - 1)
-#define BASE_ADDRESS 0xD3000000
+#define BASE_ADDRESS 0xD3000004
 uint32_t* setP()
 {
 	int fd;
