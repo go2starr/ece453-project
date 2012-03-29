@@ -8,7 +8,7 @@
 #include <sys/stat.h>
 
 typedef uint32_t __u32;
-unsigned int *pmem;
+__u32 *pmem;
 
 /*set up the pointer of the memory*/
 #define MAP_SIZE 4096UL
@@ -38,13 +38,13 @@ uint32_t* setP()
 	pmem = pbase + ((offset & MAP_MASK)>>2);
 	data = *pmem;
         
-        return *pmem;
+        return pmem;
 	return 0;
 }
 
 
 struct msg decode (struct js_event e, struct msg * heli){
-  struct msg message;
+struct msg message;
   switch(e.type){
   case 1:
     switch(e.number){
@@ -114,9 +114,10 @@ void sendmsg (struct msg message){
 
 int main () {
   int fd = open("/dev/input/js0", O_RDONLY);
-  
+ // pmem=setP();
 //  if (fd == -1)    return -1;
-  while (1) {
+/*  pass the test on memory access first.
+ *  while (1) {
     struct js_event e;
     struct msg heli;// use a current heli state to remember some semi-static value like calibration and channel
     read(fd, &e, sizeof(struct js_event));
@@ -127,7 +128,9 @@ int main () {
     sendmsg(message);
     printf("%u:: Value=%d  Type=%d  Number=%d\n",
            e.time, e.value, e.type, e.number);
-  }
+  }*/
+*pmem=1;//memory access test
+printf("This is the file you want to run\n");
     return 0;
 }
 
