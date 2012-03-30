@@ -8,13 +8,13 @@
 #include <sys/stat.h>
 
 typedef uint32_t __u32;
-__u32 *pmem;
+#define pmem (*(volatile __u32*)0xD3000004)
 
 /*set up the pointer of the memory*/
 #define MAP_SIZE 4096UL
 #define MAP_MASK (MAP_SIZE - 1)
 #define BASE_ADDRESS 0xD3000004
-uint32_t* setP()
+/*uint32_t* setP()
 {
 	int fd;
 	unsigned int offset = 0, data = 0;
@@ -41,7 +41,7 @@ uint32_t* setP()
         return pmem;
 	return 0;
 }
-
+*/
 
 struct msg decode (struct js_event e, struct msg * heli){
 struct msg message;
@@ -64,7 +64,7 @@ struct msg message;
    case 2:
     switch(e.number){
       case 2: //right thumb x -> yaw
-        message.yaw=-3*e.value/2048+47+message.trim/4;
+       message.yaw=-3*e.value/2048+47+message.trim/4;
       case 3://right thumb y -> pitch
 	message.pitch=e.value/512+64;
       case 12://L2 -> throttle
@@ -81,15 +81,14 @@ struct msg message;
   printf("%d %d %d %d\n", message.yaw, message.pitch, message.throttle, message.trim);
   return message;
 }
-
-/* write an IR pulse for @length microseconds */
+/*write an IR pulse for @length microseconds */
 void ir_write(int length)
 {
   int cycles = length / 14;
   int i=0;
   for (i = 0; i < cycles; i++) {
-    *pmem=1;usleep(7);
-    *pmem=0;usleep(7);  
+    pmem=1;usleep(7);
+    pmem=0;usleep(7);  
   }
 }
 
@@ -116,8 +115,8 @@ int main () {
   int fd = open("/dev/input/js0", O_RDONLY);
  // pmem=setP();
 //  if (fd == -1)    return -1;
-/*  pass the test on memory access first.
- *  while (1) {
+//    pass the test on memory access first.
+    while (1) {
     struct js_event e;
     struct msg heli;// use a current heli state to remember some semi-static value like calibration and channel
     read(fd, &e, sizeof(struct js_event));
@@ -127,10 +126,10 @@ int main () {
     message.throttle=126; message.channel=0; message.pitch=1; message.yaw=0x3F;
     sendmsg(message);
     printf("%u:: Value=%d  Type=%d  Number=%d\n",
-           e.time, e.value, e.type, e.number);
-  }*/
-*pmem=1;//memory access test
-printf("This is the file you want to run\n");
+    e.time, e.value, e.type, e.number);
+  }
+printf("This is the file you want to run.\n\r");
+while(1);
     return 0;
 }
 
