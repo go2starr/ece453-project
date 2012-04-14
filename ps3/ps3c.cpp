@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <fcntl.h>
-#include </linux/joystick.h>
+#include <linux/joystick.h>
 
 int main () {
   int fd = open("/dev/input/js0", O_RDONLY);

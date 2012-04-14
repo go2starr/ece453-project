@@ -1,9 +1,16 @@
-#define IRpin 2
+#include <SoftwareSerial.h>
+
+#define IRpin 4
+
+// (RX, TX)
+//SoftwareSerial mySerial(2, 3);
 
 void setup(void) {
   Serial.begin(9600);
-  Serial.println("Ready to decode IR!");
-  
+  //Serial.println("Ready to decode IR!");
+
+  //mySerial.begin(9600);
+
   pinMode(IRpin, OUTPUT);
 }
 
@@ -29,28 +36,51 @@ int sig[] = {
 int sigH[] = {
   0, 0, 0x7F, 0
 };
-  
+
 
 void loop(void) {
- // PIND = 1 << IRpin;
+  // PIND = 1 << IRpin;
+  byte c;
 
- // Leading start bit
- ir_write(2000);
- // Hold
- delayMicroseconds(2000);
+  byte ok = 0;
+  if (Serial.available()) {
+    c = Serial.read();
+    if (c == '^') {
+      for (int i = 0; i < 32; i++) {
+        while (!Serial.available());
+        c = Serial.read();
+        if (c == '0')
+          sig[i] = 0;
+        else if (c == '1')
+          sig[i] = 1;
+      }  
+      ok = 1;
+    }
+  }
+  if (ok)
+    Serial.println("OK!");
+  else
+    Serial.println("MISS!");
 
- for (int i = 0; i < 4; i++) {
-   /*
-   ir_write(260);
-   delayMicroseconds(sig[i]*350 + 350);
-   */
-   for (int j = 0; j < 8; j++) {
+  while (Serial.available())
+    Serial.read();
+
+
+  for (int k = 0; k < 1; k++) {
+
+    // Leading start bit
+    ir_write(2000);
+    // Hold
+    delayMicroseconds(2000);
+
+
+    for (int i = 0; i < 32; i++) {
       ir_write(260);
-      delayMicroseconds(((sigH[i] >> (8-j))&1)*350 + 350);
-   }
- }
- 
- sigH[2] = 0x7F;
- 
- delay(90);
+      delayMicroseconds(sig[i]*350 + 350);
+    }
+
+    delay(90);
+  }
 }
+
+
