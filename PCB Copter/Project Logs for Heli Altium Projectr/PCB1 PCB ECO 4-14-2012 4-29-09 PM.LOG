@@ -1,0 +1,19 @@
+Added Component: Designator=*(SOT89-150P410X160-3N)
+Added Component: Designator=*(XBEE)
+Added Component: Designator=*(SOT89-150P360X170-3N)
+Added Component: Designator=C1(RAD-0.3)
+Added Component: Designator=C2(RAD-0.3)
+Added Component: Designator=D?(SMC)
+Added Component: Designator=D?(3.2X1.6X1.1)
+Added Component: Designator=D?(SMC)
+Added Component: Designator=S?(SWITCH)
+Added Component: Designator=U?(32A_L)
+Added Net: Name=+5V
+Added Pin To Net: NetName=+6V Pin=D?-1
+Added Net: Name=+6V
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Net: Name=GND
+Added Pin To Net: NetName=Net*_Vin Pin=C1-1
+Added Net: Name=Net*_Vin
+Added Class: Name=FinalSchematic
+Added Room: Name=FinalSchematic

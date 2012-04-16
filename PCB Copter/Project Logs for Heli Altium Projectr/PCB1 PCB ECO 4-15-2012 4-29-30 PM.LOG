@@ -1,0 +1,5 @@
+Change Component Designator: OldDesignator=W_H4 NewDesignator=Q_H4
+Added Net: Name=HBACK
+Added Net: Name=HFOR
+Added Net: Name=TRANSTOHEADER1
+Added Net: Name=TRANSTOHEADER2

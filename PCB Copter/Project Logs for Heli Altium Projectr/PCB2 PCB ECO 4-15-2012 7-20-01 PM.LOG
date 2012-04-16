@@ -1,0 +1,5 @@
+Change Component DesignItemId : Designator=SWITCH Old DesignItemId=SW-SPDT New DesignItemId=Switcheroo
+Change Component Footprint: Designator=SWITCH Old Footprint=PCBComponent_1 New Footprint=sw
+Change Component Comment : Designator=SWITCH Old Comment=SW-SPDT New Comment=Switcheroo
+Added Pin To Net: NetName=NetD1_2 Pin=SWITCH-0
+Added Pin To Net: NetName=Net3.3V Reg_3 Pin=SWITCH-1

@@ -1,0 +1,10 @@
+Added Component: Designator=blah(Transistornew)
+Added Component: Designator=R?(AXIAL-0.4)
+Added Pin To Net: NetName=VCC Pin=blah-1
+Added Pin To Net: NetName=VCC Pin=R?-1
+Added Pin To Net: NetName=Netblah_3 Pin=blah-3
+Added Pin To Net: NetName=Netblah_3 Pin=R?-2
+Added Net: Name=Netblah_3
+Added Member To Class: ClassName=Sheet3 Member=Component blah Component_1
+Added Member To Class: ClassName=Sheet3 Member=Component R? Res2
+Added Room: Name=Sheet3

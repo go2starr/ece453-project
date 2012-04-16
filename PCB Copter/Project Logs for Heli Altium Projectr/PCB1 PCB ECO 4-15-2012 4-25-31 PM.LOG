@@ -1,0 +1,7 @@
+Removed Member From Class: ClassName=FinalSchematic Member=AVR
+Change Component Comment : Designator=R? Old Comment=R5 New Comment=R6
+Change Component Designator: OldDesignator=R? NewDesignator=R5
+Change Component Designator: OldDesignator=R? NewDesignator=R6
+Added Pin To Net: NetName=GND Pin=R5-1
+Added Pin To Net: NetName=NetD2_2 Pin=R5-2
+Added Member To Class: ClassName=FinalSchematic Member=Component R6

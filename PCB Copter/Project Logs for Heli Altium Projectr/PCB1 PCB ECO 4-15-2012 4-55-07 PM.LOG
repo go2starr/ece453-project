@@ -1,0 +1,6 @@
+Change Component Footprint: Designator=micro Old Footprint=32A_N New Footprint=32A_L
+Change Component Footprint: Designator=C1 Old Footprint=RAD-0.3 New Footprint=C1206
+Change Component Footprint: Designator=C3 Old Footprint=RAD-0.3 New Footprint=C1206
+Change Component Footprint: Designator=C2 Old Footprint=RAD-0.3 New Footprint=Capfixed
+Change Component Footprint: Designator=C4 Old Footprint=RAD-0.3 New Footprint=Capfixed
+Change Component Designator: OldDesignator=* NewDesignator=PowerPins

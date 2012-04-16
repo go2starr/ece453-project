@@ -1,0 +1,25 @@
+Removed Pin From Net: NetName=GND Pin=BotMotorHeader-2
+Removed Pin From Net: NetName=+6V Pin=Q1-1
+Removed Pin From Net: NetName=HBRIDGE1 Pin=Q1-4
+Removed Pin From Net: NetName=+6V Pin=Q2-1
+Removed Pin From Net: NetName=HBRIDGE2 Pin=Q2-4
+Removed Pin From Net: NetName=GND Pin=Q3-3
+Removed Pin From Net: NetName=HBRIDGE2 Pin=Q3-4
+Removed Pin From Net: NetName=GND Pin=Q4-3
+Removed Pin From Net: NetName=HBRIDGE1 Pin=Q4-4
+Removed Pin From Net: NetName=+6V Pin=Q5-1
+Removed Pin From Net: NetName=TOPMOTOR Pin=Q5-4
+Removed Pin From Net: NetName=+6V Pin=Q6-1
+Removed Pin From Net: NetName=BOTTOMMOTOR Pin=Q6-4
+Removed Pin From Net: NetName=GND Pin=TopMotor Header-2
+Removed Member From Class: ClassName=FinalSchematic Member=Q1
+Removed Member From Class: ClassName=FinalSchematic Member=Q2
+Removed Member From Class: ClassName=FinalSchematic Member=Q3
+Removed Member From Class: ClassName=FinalSchematic Member=Q4
+Removed Member From Class: ClassName=FinalSchematic Member=Q5
+Removed Member From Class: ClassName=FinalSchematic Member=Q6
+Added Component: Designator=One(DIP-16)
+Added Component: Designator=TWO(DIP-16)
+Added Member To Class: ClassName=FinalSchematic Member=Component One SN754410
+Added Member To Class: ClassName=FinalSchematic Member=Component TWO SN754410
+Added Room: Name=FinalSchematic

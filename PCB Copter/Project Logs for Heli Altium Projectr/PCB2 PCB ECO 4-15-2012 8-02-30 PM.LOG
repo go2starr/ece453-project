@@ -1,0 +1,146 @@
+Added Component: Designator=*(Diode)
+Added Component: Designator=2Pin header(HDR1X2)
+Added Component: Designator=3.3V Reg(SOT89-150P410X160-3N)
+Added Component: Designator=5V Regulator(SOT89-150P360X170-3N)
+Added Component: Designator=BotMotorHeader(HDR1X2)
+Added Component: Designator=C1(C1206)
+Added Component: Designator=C2(Capfixed)
+Added Component: Designator=C3(C1206)
+Added Component: Designator=C4(Capfixed)
+Added Component: Designator=Header(HDR1X2)
+Added Component: Designator=LED1(LEDFixed)
+Added Component: Designator=LED2(LEDFixed)
+Added Component: Designator=micro(32A_L)
+Added Component: Designator=PowerPins(HDR1X2)
+Added Component: Designator=Programmer(HDR2X5)
+Added Component: Designator=Q1(Transistornew)
+Added Component: Designator=Q2(Transistornew)
+Added Component: Designator=Q3(Transistornew)
+Added Component: Designator=Q4(Transistornew)
+Added Component: Designator=Q5(Transistornew)
+Added Component: Designator=Q6(Transistornew)
+Added Component: Designator=R1(J1-0603)
+Added Component: Designator=R2(J1-0603)
+Added Component: Designator=R5(J1-0603)
+Added Component: Designator=R6(J1-0603)
+Added Component: Designator=Switch(sw)
+Added Component: Designator=TopMotor Header(HDR1X2)
+Added Component: Designator=wifly(XBEE)
+Added Pin To Net: NetName=+6V Pin=*-A
+Added Pin To Net: NetName=Net*_K Pin=*-K
+Added Pin To Net: NetName=HFOR Pin=2Pin header-1
+Added Pin To Net: NetName=HBACK Pin=2Pin header-2
+Added Pin To Net: NetName=+3.3V Pin=3.3V Reg-1
+Added Pin To Net: NetName=GND Pin=3.3V Reg-2
+Added Pin To Net: NetName=GND Pin=3.3V Reg-2
+Added Pin To Net: NetName=Net3.3V Reg_3 Pin=3.3V Reg-3
+Added Pin To Net: NetName=+5V Pin=5V Regulator-1
+Added Pin To Net: NetName=GND Pin=5V Regulator-2
+Added Pin To Net: NetName=GND Pin=5V Regulator-2
+Added Pin To Net: NetName=Net3.3V Reg_3 Pin=5V Regulator-3
+Added Pin To Net: NetName=TRANSTOHEADER2 Pin=BotMotorHeader-1
+Added Pin To Net: NetName=GND Pin=BotMotorHeader-2
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=Net3.3V Reg_3 Pin=C1-2
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=+5V Pin=C2-2
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=Net3.3V Reg_3 Pin=C3-2
+Added Pin To Net: NetName=GND Pin=C4-1
+Added Pin To Net: NetName=+3.3V Pin=C4-2
+Added Pin To Net: NetName=ADHOC_EN Pin=Header-1
+Added Pin To Net: NetName=+3.3V Pin=LED1-A
+Added Pin To Net: NetName=NetLED1_K Pin=LED1-K
+Added Pin To Net: NetName=+5V Pin=LED2-A
+Added Pin To Net: NetName=NetLED2_K Pin=LED2-K
+Added Pin To Net: NetName=GND Pin=micro-3
+Added Pin To Net: NetName=+5V Pin=micro-4
+Added Pin To Net: NetName=GND Pin=micro-5
+Added Pin To Net: NetName=+5V Pin=micro-6
+Added Pin To Net: NetName=BOTTOMMOTOR Pin=micro-9
+Added Pin To Net: NetName=TOPMOTOR Pin=micro-10
+Added Pin To Net: NetName=HBRIDGE1 Pin=micro-13
+Added Pin To Net: NetName=HBRIDGE2 Pin=micro-14
+Added Pin To Net: NetName=MOSI Pin=micro-15
+Added Pin To Net: NetName=MISO Pin=micro-16
+Added Pin To Net: NetName=SCK Pin=micro-17
+Added Pin To Net: NetName=+5V Pin=micro-18
+Added Pin To Net: NetName=GND Pin=micro-19
+Added Pin To Net: NetName=GND Pin=micro-21
+Added Pin To Net: NetName=GND Pin=micro-22
+Added Pin To Net: NetName=RESET Pin=micro-29
+Added Pin To Net: NetName=RX_ATM Pin=micro-30
+Added Pin To Net: NetName=TX_ATM Pin=micro-31
+Added Pin To Net: NetName=+6V Pin=PowerPins-1
+Added Pin To Net: NetName=GND Pin=PowerPins-2
+Added Pin To Net: NetName=MOSI Pin=Programmer-1
+Added Pin To Net: NetName=+5V Pin=Programmer-2
+Added Pin To Net: NetName=GND Pin=Programmer-4
+Added Pin To Net: NetName=RESET Pin=Programmer-5
+Added Pin To Net: NetName=GND Pin=Programmer-6
+Added Pin To Net: NetName=SCK Pin=Programmer-7
+Added Pin To Net: NetName=GND Pin=Programmer-8
+Added Pin To Net: NetName=MISO Pin=Programmer-9
+Added Pin To Net: NetName=GND Pin=Programmer-10
+Added Pin To Net: NetName=+6V Pin=Q1-1
+Added Pin To Net: NetName=HBRIDGE1 Pin=Q1-3
+Added Pin To Net: NetName=+6V Pin=Q2-1
+Added Pin To Net: NetName=HBRIDGE2 Pin=Q2-3
+Added Pin To Net: NetName=HFOR Pin=Q3-1
+Added Pin To Net: NetName=HBRIDGE2 Pin=Q3-3
+Added Pin To Net: NetName=HBACK Pin=Q4-1
+Added Pin To Net: NetName=HBRIDGE1 Pin=Q4-3
+Added Pin To Net: NetName=+6V Pin=Q5-1
+Added Pin To Net: NetName=TOPMOTOR Pin=Q5-3
+Added Pin To Net: NetName=+6V Pin=Q6-1
+Added Pin To Net: NetName=BOTTOMMOTOR Pin=Q6-3
+Added Pin To Net: NetName=RESET Pin=R1-1
+Added Pin To Net: NetName=+5V Pin=R1-2
+Added Pin To Net: NetName=NetR2_1 Pin=R2-1
+Added Pin To Net: NetName=+3.3V Pin=R2-2
+Added Pin To Net: NetName=GND Pin=R5-1
+Added Pin To Net: NetName=NetLED2_K Pin=R5-2
+Added Pin To Net: NetName=GND Pin=R6-1
+Added Pin To Net: NetName=NetLED1_K Pin=R6-2
+Added Pin To Net: NetName=Net*_K Pin=Switch-0
+Added Pin To Net: NetName=Net3.3V Reg_3 Pin=Switch-1
+Added Pin To Net: NetName=TRANSTOHEADER1 Pin=TopMotor Header-1
+Added Pin To Net: NetName=GND Pin=TopMotor Header-2
+Added Pin To Net: NetName=+3.3V Pin=wifly-1
+Added Pin To Net: NetName=RX_ATM Pin=wifly-2
+Added Pin To Net: NetName=TX_ATM Pin=wifly-3
+Added Pin To Net: NetName=NetR2_1 Pin=wifly-5
+Added Pin To Net: NetName=ADHOC_EN Pin=wifly-8
+Added Pin To Net: NetName=GND Pin=wifly-10
+Added Pin To Net: NetName=GND Pin=wifly-16
+Added Pin To Net: NetName=GND Pin=wifly-17
+Added Pin To Net: NetName=GND Pin=wifly-20
+Added Member To Class: ClassName=FinalSchematic Member=Component * DIODE
+Added Member To Class: ClassName=FinalSchematic Member=Component 2Pin header Header 2
+Added Member To Class: ClassName=FinalSchematic Member=Component 3.3V Reg TO-220 3.3 V Regulator
+Added Member To Class: ClassName=FinalSchematic Member=Component 5V Regulator 5v Regulator
+Added Member To Class: ClassName=FinalSchematic Member=Component BotMotorHeader Header 2
+Added Member To Class: ClassName=FinalSchematic Member=Component C1 Cap
+Added Member To Class: ClassName=FinalSchematic Member=Component C2 Cap
+Added Member To Class: ClassName=FinalSchematic Member=Component C3 Cap
+Added Member To Class: ClassName=FinalSchematic Member=Component C4 Cap
+Added Member To Class: ClassName=FinalSchematic Member=Component Header Header 2
+Added Member To Class: ClassName=FinalSchematic Member=Component LED1 LED
+Added Member To Class: ClassName=FinalSchematic Member=Component LED2 LED
+Added Member To Class: ClassName=FinalSchematic Member=Component micro ATmega328-AU
+Added Member To Class: ClassName=FinalSchematic Member=Component PowerPins Header 2
+Added Member To Class: ClassName=FinalSchematic Member=Component Programmer Header 5X2
+Added Member To Class: ClassName=FinalSchematic Member=Component Q1 transistor
+Added Member To Class: ClassName=FinalSchematic Member=Component Q2 transistor
+Added Member To Class: ClassName=FinalSchematic Member=Component Q3 transistor
+Added Member To Class: ClassName=FinalSchematic Member=Component Q4 transistor
+Added Member To Class: ClassName=FinalSchematic Member=Component Q5 transistor
+Added Member To Class: ClassName=FinalSchematic Member=Component Q6 transistor
+Added Member To Class: ClassName=FinalSchematic Member=Component R1 Res3
+Added Member To Class: ClassName=FinalSchematic Member=Component R2 Res3
+Added Member To Class: ClassName=FinalSchematic Member=Component R5 Res3
+Added Member To Class: ClassName=FinalSchematic Member=Component R6 Res3
+Added Member To Class: ClassName=FinalSchematic Member=Component Switch Switcheroo
+Added Member To Class: ClassName=FinalSchematic Member=Component TopMotor Header Header 2
+Added Member To Class: ClassName=FinalSchematic Member=Component wifly RN-XV
+Added Room: Name=FinalSchematic

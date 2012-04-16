@@ -1,0 +1,3 @@
+Removed Member From Class: ClassName=FinalSchematic Member=5 V Regulator
+Added Component: Designator=5V Regulator(SOT89-150P360X170-3N)
+Added Member To Class: ClassName=FinalSchematic Member=Component 5V Regulator 5v Regulator

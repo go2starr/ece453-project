@@ -1,0 +1,11 @@
+Added Component: Designator=asdf(Transistornew)
+Added Component: Designator=R?(AXIAL-0.4)
+Added Pin To Net: NetName=VCC Pin=asdf-1
+Added Pin To Net: NetName=VCC Pin=R?-1
+Added Net: Name=GND
+Added Pin To Net: NetName=Netasdf_3 Pin=asdf-3
+Added Pin To Net: NetName=Netasdf_3 Pin=R?-2
+Added Net: Name=Netasdf_3
+Added Member To Class: ClassName=Sheet3 Member=Component asdf Transistor
+Added Member To Class: ClassName=Sheet3 Member=Component R? Res2
+Added Room: Name=Sheet3

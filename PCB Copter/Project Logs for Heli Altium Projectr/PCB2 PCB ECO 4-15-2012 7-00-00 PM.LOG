@@ -1,0 +1,8 @@
+Removed Member From Class: ClassName=FinalSchematic Member=3.3 V Regulator
+Added Component: Designator=3.3V Reg(SOT89-150P410X160-3N)
+Added Pin To Net: NetName=+3.3V Pin=3.3V Reg-1
+Added Pin To Net: NetName=GND Pin=3.3V Reg-2
+Added Pin To Net: NetName=GND Pin=3.3V Reg-2
+Added Pin To Net: NetName=Net3.3 V Regulator_Vin Pin=3.3V Reg-3
+Change Net Name : Old Net Name=Net3.3 V Regulator_Vin New Net Name=Net3.3V Reg_3
+Added Member To Class: ClassName=FinalSchematic Member=Component 3.3V Reg TO-220 3.3 V Regulator

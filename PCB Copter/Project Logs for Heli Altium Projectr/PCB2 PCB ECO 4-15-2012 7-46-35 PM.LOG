@@ -1,0 +1,21 @@
+Removed Member From Class: ClassName=FinalSchematic Member=D1
+Removed Member From Class: ClassName=FinalSchematic Member=D2
+Removed Member From Class: ClassName=FinalSchematic Member=D3
+Added Component: Designator=*(Diode)
+Added Component: Designator=LED1(LEDFixed)
+Added Component: Designator=LED2(LEDFixed)
+Added Pin To Net: NetName=+6V Pin=*-A
+Added Pin To Net: NetName=+3.3V Pin=LED1-A
+Added Pin To Net: NetName=+5V Pin=LED2-A
+Added Pin To Net: NetName=Net*_K Pin=*-K
+Added Pin To Net: NetName=Net*_K Pin=SWITCH-0
+Added Net: Name=Net*_K
+Added Pin To Net: NetName=NetLED1_K Pin=LED1-K
+Added Pin To Net: NetName=NetLED1_K Pin=R6-2
+Added Net: Name=NetLED1_K
+Added Pin To Net: NetName=NetLED2_K Pin=LED2-K
+Added Pin To Net: NetName=NetLED2_K Pin=R5-2
+Added Net: Name=NetLED2_K
+Added Member To Class: ClassName=FinalSchematic Member=Component * DIODE
+Added Member To Class: ClassName=FinalSchematic Member=Component LED1 LED
+Added Member To Class: ClassName=FinalSchematic Member=Component LED2 LED

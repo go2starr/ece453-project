@@ -1,0 +1,22 @@
+Change Component Footprint: Designator=micro Old Footprint=32A_L New Footprint=32A_N
+Change Component Footprint: Designator=C1 Old Footprint=C1206 New Footprint=RAD-0.3
+Change Component Footprint: Designator=C3 Old Footprint=C1206 New Footprint=RAD-0.3
+Change Component Footprint: Designator=C2 Old Footprint=Capfixed New Footprint=RAD-0.3
+Change Component Footprint: Designator=C4 Old Footprint=Capfixed New Footprint=RAD-0.3
+Change Component Footprint: Designator=D1 Old Footprint=Diode New Footprint=SMC
+Change Component Footprint: Designator=D2 Old Footprint=LEDFixed New Footprint=3.2X1.6X1.1
+Change Component Footprint: Designator=D3 Old Footprint=LEDFixed New Footprint=3.2X1.6X1.1
+Change Component Footprint: Designator=SWITCH Old Footprint=SWITCH New Footprint=TL36WW15050
+Change Component Comment : Designator=5 V Regulator Old Comment= New Comment=5v Regulator
+Change Component Comment : Designator=3.3 V Regulator Old Comment= New Comment=TO-220 3.3 V Regulator
+Change Component Comment : Designator=R5 Old Comment=R5 New Comment=Res3
+Change Component Comment : Designator=R6 Old Comment=R6 New Comment=Res3
+Change Component Comment : Designator=2Pin header Old Comment=Rear Motor New Comment=2Pin header
+Added Pin To Net: NetName=+6V Pin=D1-1
+Added Pin To Net: NetName=NetD1_2 Pin=D1-2
+Added Pin To Net: NetName=+5V Pin=D2-1
+Added Pin To Net: NetName=NetD2_2 Pin=D2-2
+Added Pin To Net: NetName=+3.3V Pin=D3-1
+Added Pin To Net: NetName=NetD3_2 Pin=D3-2
+Added Pin To Net: NetName=NetD1_2 Pin=SWITCH-1
+Added Pin To Net: NetName=VINAFTERSWITCH Pin=SWITCH-2

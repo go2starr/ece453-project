@@ -1,0 +1,8 @@
+Added Pin To Net: NetName=+5V Pin=5V Regulator-1
+Added Pin To Net: NetName=5VREGTOGROUND Pin=5V Regulator-2
+Added Pin To Net: NetName=5VREGTOGROUND Pin=5V Regulator-2
+Change Net Name : Old Net Name=5VREGTOGROUND New Net Name=GND
+Added Pin To Net: NetName=Net3.3 V Regulator_Vin Pin=5V Regulator-3
+Added Pin To Net: NetName=Net3.3 V Regulator_Vin Pin=C1-2
+Added Pin To Net: NetName=Net3.3 V Regulator_Vin Pin=C3-2
+Added Net: Name=Net3.3 V Regulator_Vin

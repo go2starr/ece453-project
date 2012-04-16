@@ -8,13 +8,15 @@
 #include <sys/stat.h>
 
 typedef uint32_t __u32;
-#define pmem (*(volatile __u32*)0xD3000004)
+//#define pmem (*(volatile __u32*)0xD3000004)
 
 /*set up the pointer of the memory*/
 #define MAP_SIZE 4096UL
 #define MAP_MASK (MAP_SIZE - 1)
 #define BASE_ADDRESS 0xD3000004
-/*uint32_t* setP()
+
+__u32 * pmem;
+uint32_t* setP()
 {
 	int fd;
 	unsigned int offset = 0, data = 0;
@@ -39,9 +41,8 @@ typedef uint32_t __u32;
 	data = *pmem;
         
         return pmem;
-	return 0;
 }
-*/
+
 
 struct msg decode (struct js_event e, struct msg * heli){
 struct msg message;
@@ -87,21 +88,26 @@ void ir_write(int length)
   int cycles = length / 14;
   int i=0;
   for (i = 0; i < cycles; i++) {
-    pmem=1;usleep(7);
-    pmem=0;usleep(7);  
+    *(pmem+1)=1;usleep(7);
+    *(pmem+1)=0;usleep(7);  
   }
 }
 
 
 void sendbit (unsigned short bit){
   int i=0;
-  ir_write(260);//send pulse for 260us
+ /* ir_write(260);//send pulse for 260us
   usleep(bit*350+350);//delay at low
+*/
+  *(pmem+1)=0; usleep(260);
+  *(pmem+1)=1; usleep(bit*350+350);
 }
 
 void sendmsg (struct msg message){
-  ir_write(1000);
-  usleep(1000);//delay for 1000us to avoid confliction
+ // ir_write(1000);
+  //usleep(1000);//delay for 1000us to avoid confliction
+  *(pmem+1)=0; usleep(2000);
+  *(pmem+1)=1; usleep(2000);
   int i=0;
   for (i=0;i<32;i++){
     __u32 message=*((__u32*)(void*)(&message));//force cast message from struct to unsigned int
@@ -111,9 +117,36 @@ void sendmsg (struct msg message){
   }
 }
 
+
+uint8_t KILL_MSG[4] = {
+  0, 0, 0, 0
+};
+
+
 int main () {
+  int i;
   int fd = open("/dev/input/js0", O_RDONLY);
- // pmem=setP();
+  pmem=setP();
+
+
+  while (1) {
+    /* send header */
+    ir_write(2000);             /* start bit */
+    usleep(2000);               /* start bit */
+
+    /* send message */
+    for (i = 0; i < 32; i++) {
+      ir_write(260);
+      usleep(350);
+    }    
+
+    /* sleep between */
+    usleep(10000);
+  }
+
+
+  /*
+
 //  if (fd == -1)    return -1;
 //    pass the test on memory access first.
     while (1) {
@@ -127,9 +160,21 @@ int main () {
     sendmsg(message);
     printf("%u:: Value=%d  Type=%d  Number=%d\n",
     e.time, e.value, e.type, e.number);
+    usleep(90000);
   }
+
+  */
+
+/*
+ //GPIO testing 2
+ while(1) { *(pmem+1)=1; usleep(4000); *(pmem+1)=0; usleep(4000);}
 printf("This is the file you want to run.\n\r");
-while(1);
+*/
+
+/*
+ *GPIO testing 1
+ *(pmem+1)=0xff;
+ */ while(1);
     return 0;
 }
 

@@ -1,0 +1,6 @@
+Added Component: Designator=5V Regulator(SOT89-150P360X170-3N)
+Added Pin To Net: NetName=+5V Pin=5V Regulator-1
+Added Pin To Net: NetName=GND Pin=5V Regulator-2
+Added Pin To Net: NetName=GND Pin=5V Regulator-2
+Added Pin To Net: NetName=Net3.3V Reg_3 Pin=5V Regulator-3
+Added Member To Class: ClassName=FinalSchematic Member=Component 5V Regulator 5v Regulator

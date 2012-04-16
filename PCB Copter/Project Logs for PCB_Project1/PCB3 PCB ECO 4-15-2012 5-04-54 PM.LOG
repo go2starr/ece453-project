@@ -1,0 +1,8 @@
+Added Component: Designator=R?(AXIAL-0.4)
+Added Net: Name=GND
+Added Pin To Net: NetName=NetR?_2 Pin=R?-2
+Added Net: Name=NetR?_2
+Added Pin To Net: NetName=VCC Pin=R?-1
+Added Net: Name=VCC
+Added Class: Name=Sheet3
+Added Room: Name=Sheet3
