@@ -1,0 +1,11 @@
+Added Component: Designator=Motor Header(HDR1X8)
+Added Pin To Net: NetName=TX Pin=Motor Header-1
+Added Pin To Net: NetName=RX Pin=Motor Header-2
+Added Pin To Net: NetName=MD-TOP Pin=Motor Header-3
+Added Pin To Net: NetName=MD-BOTTOM Pin=Motor Header-4
+Added Pin To Net: NetName=GND Pin=Motor Header-5
+Added Pin To Net: NetName=GND Pin=Motor Header-6
+Added Pin To Net: NetName=MD-TAIL-1 Pin=Motor Header-7
+Added Pin To Net: NetName=MD-TAIL-2 Pin=Motor Header-8
+Added Member To Class: ClassName=FinalSchematic Member=Component Motor Header Header 8
+Added Room: Name=FinalSchematic

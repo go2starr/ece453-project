@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=+5V Pin=TWO-1
+Removed Pin From Net: NetName=MC-TOP Pin=TWO-2
+Removed Pin From Net: NetName=MD-TOP Pin=TWO-3
+Removed Pin From Net: NetName=GND Pin=TWO-4
+Removed Pin From Net: NetName=GND Pin=TWO-5
+Removed Pin From Net: NetName=MD-BOTTOM Pin=TWO-6
+Removed Pin From Net: NetName=MC-BOTTOM Pin=TWO-7
+Removed Pin From Net: NetName=+6V Pin=TWO-8
+Removed Pin From Net: NetName=+5V Pin=TWO-9
+Removed Pin From Net: NetName=MC-TAIL-2 Pin=TWO-10
+Removed Pin From Net: NetName=MD-TAIL-2 Pin=TWO-11
+Removed Pin From Net: NetName=GND Pin=TWO-12
+Removed Pin From Net: NetName=GND Pin=TWO-13
+Removed Pin From Net: NetName=MD-TAIL-1 Pin=TWO-14
+Removed Pin From Net: NetName=MC-TAIL-1 Pin=TWO-15
+Removed Pin From Net: NetName=+5V Pin=TWO-16
+Removed Member From Class: ClassName=FinalSchematic Member=TWO
+Added Room: Name=FinalSchematic

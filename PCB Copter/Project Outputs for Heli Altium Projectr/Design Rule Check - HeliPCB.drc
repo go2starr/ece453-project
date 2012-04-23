@@ -1,0 +1,44 @@
+Protel Design System Design Rule Check
+PCB File : C:\vmware-shared\ece453-project\PCB Copter\HeliPCB.PcbDoc
+Date     : 4/20/2012
+Time     : 2:28:19 PM
+
+Processing Rule : Clearance Constraint (Gap=8mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=30mil) (Max=40mil) (Preferred=30mil) ((InNet('GND') AND InComponent('One')))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=20mil) (Max=40mil) (Preferred=30mil) ((InNet('MD-BOTTOM') OR InNet('MD-TAIL-1') OR InNet('MD-TAIL-2') OR InNet('MD-TOP') OR InNet('+6V') OR InNet('VIN')))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=10mil) ((InNet('+6V') OR  InNet('VIN') OR  InNet('MD-TOP') OR  InNet('MD-BOTTOM') OR  InNet('MD-TAIL-1') OR  InNet('MD-TAIL-2'))),(InNet('GND'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=35mil) (Preferred=15mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+
+Violations Detected : 0
+Time Elapsed        : 00:00:00

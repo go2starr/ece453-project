@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=+6V Pin=Power Header-1
+Added Component: Designator=PwrDiode2(Diode)
+Added Component: Designator=PwrDiode(Diode)
+Added Pin To Net: NetName=+6V Pin=PwrDiode2-K
+Added Pin To Net: NetName=+6V Pin=PwrDiode-K
+Added Pin To Net: NetName=VIN Pin=Power Header-1
+Added Pin To Net: NetName=VIN Pin=PwrDiode2-A
+Added Pin To Net: NetName=VIN Pin=PwrDiode-A
+Added Net: Name=VIN
+Added Member To Class: ClassName=FinalSchematic Member=Component PwrDiode2 DIODE
+Added Member To Class: ClassName=FinalSchematic Member=Component PwrDiode DIODE
+Added Room: Name=FinalSchematic

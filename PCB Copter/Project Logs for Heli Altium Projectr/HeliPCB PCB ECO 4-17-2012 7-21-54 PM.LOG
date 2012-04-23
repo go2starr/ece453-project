@@ -1,0 +1,113 @@
+Added Component: Designator=3.3V Reg(SOT89-150P410X160-3N)
+Added Component: Designator=5V Regulator(SOT89-150P360X170-3N)
+Added Component: Designator=C1(C1206)
+Added Component: Designator=C2(C0805)
+Added Component: Designator=C3(C1206)
+Added Component: Designator=C4(C0805)
+Added Component: Designator=LED1(LEDFixed)
+Added Component: Designator=LED2(LEDFixed)
+Added Component: Designator=micro(32A_M)
+Added Component: Designator=Motor Header(HDR1X8)
+Added Component: Designator=Power Header(HDR1X6)
+Added Component: Designator=Programmer(HDR2X5)
+Added Component: Designator=PwrDiode(Diode)
+Added Component: Designator=PwrDiode(Diode)
+Added Component: Designator=R5(J1-0603)
+Added Component: Designator=R6(J1-0603)
+Added Component: Designator=wifly(XBEE)
+Added Pin To Net: NetName=+3.3V Pin=3.3V Reg-1
+Added Pin To Net: NetName=+3.3V Pin=C4-2
+Added Pin To Net: NetName=+3.3V Pin=LED1-A
+Added Pin To Net: NetName=+3.3V Pin=wifly-1
+Added Net: Name=+3.3V
+Added Pin To Net: NetName=+5V Pin=5V Regulator-1
+Added Pin To Net: NetName=+5V Pin=C2-2
+Added Pin To Net: NetName=+5V Pin=LED2-A
+Added Pin To Net: NetName=+5V Pin=micro-4
+Added Pin To Net: NetName=+5V Pin=micro-6
+Added Pin To Net: NetName=+5V Pin=micro-18
+Added Pin To Net: NetName=+5V Pin=Programmer-2
+Added Net: Name=+5V
+Added Pin To Net: NetName=+6V Pin=3.3V Reg-3
+Added Pin To Net: NetName=+6V Pin=5V Regulator-3
+Added Pin To Net: NetName=+6V Pin=C1-2
+Added Pin To Net: NetName=+6V Pin=C3-2
+Added Pin To Net: NetName=+6V Pin=PwrDiode-K
+Added Pin To Net: NetName=+6V Pin=PwrDiode-K
+Added Net: Name=+6V
+Added Pin To Net: NetName=GND Pin=3.3V Reg-2
+Added Pin To Net: NetName=GND Pin=3.3V Reg-2
+Added Pin To Net: NetName=GND Pin=5V Regulator-2
+Added Pin To Net: NetName=GND Pin=5V Regulator-2
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=GND Pin=C4-1
+Added Pin To Net: NetName=GND Pin=micro-3
+Added Pin To Net: NetName=GND Pin=micro-5
+Added Pin To Net: NetName=GND Pin=micro-19
+Added Pin To Net: NetName=GND Pin=micro-21
+Added Pin To Net: NetName=GND Pin=micro-22
+Added Pin To Net: NetName=GND Pin=Motor Header-4
+Added Pin To Net: NetName=GND Pin=Motor Header-6
+Added Pin To Net: NetName=GND Pin=Power Header-2
+Added Pin To Net: NetName=GND Pin=Programmer-4
+Added Pin To Net: NetName=GND Pin=Programmer-6
+Added Pin To Net: NetName=GND Pin=Programmer-8
+Added Pin To Net: NetName=GND Pin=Programmer-10
+Added Pin To Net: NetName=GND Pin=R5-2
+Added Pin To Net: NetName=GND Pin=R6-2
+Added Pin To Net: NetName=GND Pin=wifly-10
+Added Net: Name=GND
+Added Pin To Net: NetName=MC-BOTTOM Pin=micro-9
+Added Net: Name=MC-BOTTOM
+Added Pin To Net: NetName=MC-TAIL-1 Pin=micro-13
+Added Net: Name=MC-TAIL-1
+Added Pin To Net: NetName=MC-TAIL-2 Pin=micro-14
+Added Net: Name=MC-TAIL-2
+Added Pin To Net: NetName=MC-TOP Pin=micro-10
+Added Net: Name=MC-TOP
+Added Pin To Net: NetName=MD-BOTTOM Pin=Motor Header-5
+Added Net: Name=MD-BOTTOM
+Added Pin To Net: NetName=MD-TAIL-1 Pin=Motor Header-7
+Added Net: Name=MD-TAIL-1
+Added Pin To Net: NetName=MD-TAIL-2 Pin=Motor Header-8
+Added Net: Name=MD-TAIL-2
+Added Pin To Net: NetName=MD-TOP Pin=Motor Header-3
+Added Net: Name=MD-TOP
+Added Pin To Net: NetName=MISO Pin=micro-16
+Added Pin To Net: NetName=MISO Pin=Programmer-9
+Added Net: Name=MISO
+Added Pin To Net: NetName=MOSI Pin=micro-15
+Added Pin To Net: NetName=MOSI Pin=Programmer-1
+Added Net: Name=MOSI
+Added Pin To Net: NetName=NetLED1_K Pin=LED1-K
+Added Pin To Net: NetName=NetLED1_K Pin=R6-1
+Added Net: Name=NetLED1_K
+Added Pin To Net: NetName=NetLED2_K Pin=LED2-K
+Added Pin To Net: NetName=NetLED2_K Pin=R5-1
+Added Net: Name=NetLED2_K
+Added Pin To Net: NetName=RESET Pin=micro-29
+Added Pin To Net: NetName=RESET Pin=Programmer-5
+Added Net: Name=RESET
+Added Pin To Net: NetName=RX_ATM Pin=micro-30
+Added Pin To Net: NetName=RX_ATM Pin=wifly-2
+Added Net: Name=RX_ATM
+Added Pin To Net: NetName=RX Pin=micro-1
+Added Pin To Net: NetName=RX Pin=Motor Header-2
+Added Net: Name=RX
+Added Pin To Net: NetName=SCK Pin=micro-17
+Added Pin To Net: NetName=SCK Pin=Programmer-7
+Added Net: Name=SCK
+Added Pin To Net: NetName=TX_ATM Pin=micro-31
+Added Pin To Net: NetName=TX_ATM Pin=wifly-3
+Added Net: Name=TX_ATM
+Added Pin To Net: NetName=TX Pin=micro-32
+Added Pin To Net: NetName=TX Pin=Motor Header-1
+Added Net: Name=TX
+Added Pin To Net: NetName=VIN Pin=Power Header-1
+Added Pin To Net: NetName=VIN Pin=PwrDiode-A
+Added Pin To Net: NetName=VIN Pin=PwrDiode-A
+Added Net: Name=VIN
+Added Class: Name=FinalSchematic
+Added Room: Name=FinalSchematic

@@ -1,0 +1,3 @@
+Added Pin To Net: NetName=VIN Pin=PwrDiode-A
+Added Pin To Net: NetName=+6V Pin=PwrDiode-K
+Added Room: Name=FinalSchematic

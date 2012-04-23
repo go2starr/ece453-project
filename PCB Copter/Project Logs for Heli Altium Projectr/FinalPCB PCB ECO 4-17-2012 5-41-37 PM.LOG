@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=+6V Pin=Switch-1
+Removed Member From Class: ClassName=FinalSchematic Member=Switch
+Change Component Designator: OldDesignator=PowerHeader NewDesignator=Power Header
+Added Component: Designator=PwrDiode(Diode)
+Added Pin To Net: NetName=VIN Pin=PwrDiode-A
+Added Pin To Net: NetName=+6V Pin=PwrDiode-K
+Added Pin To Net: NetName=+6V Pin=PwrDiode-K
+Added Room: Name=FinalSchematic

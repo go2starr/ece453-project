@@ -1,0 +1,5 @@
+Change Component Footprint: Designator=C2 Old Footprint=RAD-0.3 New Footprint=C0805
+Change Component Footprint: Designator=C4 Old Footprint=RAD-0.3 New Footprint=C0805
+Change Component Footprint: Designator=C1 Old Footprint=RAD-0.3 New Footprint=C1206
+Change Component Footprint: Designator=C3 Old Footprint=RAD-0.3 New Footprint=C1206
+Added Pin To Net: NetName=+6V Pin=PwrDiode-K

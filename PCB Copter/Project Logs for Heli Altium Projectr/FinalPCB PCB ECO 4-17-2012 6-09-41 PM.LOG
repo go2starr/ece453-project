@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=GND Pin=wifly-16
+Removed Pin From Net: NetName=GND Pin=wifly-17
+Removed Pin From Net: NetName=GND Pin=wifly-20
+Change Component Footprint: Designator=micro Old Footprint=32A_L New Footprint=32A_M
+Change Component Footprint: Designator=C1 Old Footprint=C1206 New Footprint=RAD-0.3
+Change Component Footprint: Designator=C3 Old Footprint=C1206 New Footprint=RAD-0.3
+Change Component Footprint: Designator=C2 Old Footprint=Capfixed New Footprint=RAD-0.3
+Change Component Footprint: Designator=C4 Old Footprint=Capfixed New Footprint=RAD-0.3
+Change Component Comment : Designator=PwrDiode Old Comment=IODE New Comment=DIODE
+Added Pin To Net: NetName=+6V Pin=PwrDiode-K

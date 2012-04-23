@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=+6V Pin=PwrDiode2-K
+Removed Pin From Net: NetName=+6V Pin=PwrDiode-K
+Removed Member From Class: ClassName=FinalSchematic Member=PwrDiode2
+Removed Member From Class: ClassName=FinalSchematic Member=PwrDiode
+Added Pin To Net: NetName=+6V Pin=Power Header-1
+Added Room: Name=FinalSchematic

@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=+6V Pin=Switch-1
+Removed Pin From Net: NetName=GND Pin=wifly-16
+Removed Pin From Net: NetName=GND Pin=wifly-17
+Removed Pin From Net: NetName=GND Pin=wifly-20
+Change Component Footprint: Designator=micro Old Footprint=32A_L New Footprint=32A_M
+Change Component Footprint: Designator=C2 Old Footprint=Capfixed New Footprint=C0805
+Change Component Footprint: Designator=C4 Old Footprint=Capfixed New Footprint=C0805
+Change Component Designator: OldDesignator=PowerHeader NewDesignator=Power Header
+Added Component: Designator=PwrDiode(Diode)
+Added Pin To Net: NetName=VIN Pin=PwrDiode-A
+Added Pin To Net: NetName=+6V Pin=PwrDiode-K
+Added Pin To Net: NetName=+6V Pin=PwrDiode-K
+Added Member To Class: ClassName=FinalSchematic Member=Component Power Header Header 6
+Added Member To Class: ClassName=FinalSchematic Member=Component PwrDiode DIODE
+Added Room: Name=FinalSchematic

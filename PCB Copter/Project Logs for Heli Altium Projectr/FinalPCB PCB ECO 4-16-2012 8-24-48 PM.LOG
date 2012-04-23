@@ -1,0 +1,7 @@
+Added Pin To Net: NetName=Net3.3V Reg_3 Pin=One-8
+Added Pin To Net: NetName=Net3.3V Reg_3 Pin=TWO-8
+Change Net Name : Old Net Name=Net3.3V Reg_3 New Net Name=+6V
+Added Pin To Net: NetName=VIN Pin=PowerHeader-1
+Added Pin To Net: NetName=VIN Pin=PwrDiode-A
+Added Net: Name=VIN
+Added Room: Name=FinalSchematic

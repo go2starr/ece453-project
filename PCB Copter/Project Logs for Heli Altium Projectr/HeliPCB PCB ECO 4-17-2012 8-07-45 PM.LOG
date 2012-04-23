@@ -1,0 +1,6 @@
+Added Component: Designator=PwrDiode2(Diode)
+Added Pin To Net: NetName=VIN Pin=PwrDiode2-A
+Added Pin To Net: NetName=+6V Pin=PwrDiode2-K
+Added Member To Class: ClassName=FinalSchematic Member=Component PwrDiode2 DIODE
+Added Member To Class: ClassName=FinalSchematic Member=Component PwrDiode DIODE
+Added Room: Name=FinalSchematic
